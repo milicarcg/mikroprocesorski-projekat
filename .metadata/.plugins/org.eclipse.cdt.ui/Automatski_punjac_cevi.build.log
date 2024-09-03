@@ -1,0 +1,19 @@
+13:18:57 **** Incremental Build of configuration Debug for project Automatski_punjac_cevi ****
+make -j12 all 
+arm-none-eabi-gcc -o "Automatski_punjac_cevi.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\roga0\Fakultet\Mikroprocesorski - projekat\Automatski_punjac_cevi\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Automatski_punjac_cevi.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Automatski_punjac_cevi.elf
+ 
+arm-none-eabi-size   Automatski_punjac_cevi.elf 
+arm-none-eabi-objdump -h -S  Automatski_punjac_cevi.elf  > "Automatski_punjac_cevi.list"
+arm-none-eabi-objcopy  -O ihex  Automatski_punjac_cevi.elf  "Automatski_punjac_cevi.hex"
+   text	   data	    bss	    dec	    hex	filename
+   5220	     20	   1580	   6820	   1aa4	Automatski_punjac_cevi.elf
+Finished building: default.size.stdout
+ 
+Finished building: Automatski_punjac_cevi.list
+ 
+Finished building: Automatski_punjac_cevi.hex
+ 
+
+13:18:58 Build Finished. 0 errors, 0 warnings. (took 1s.420ms)
+
